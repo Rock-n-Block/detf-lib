@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "CommonJS",
+    "allowJs": false,
+    "declaration": true,
+    "declarationMap": false,
+    "sourceMap": false,
+    "removeComments": false,
+    "noEmit": false,
+    "incremental": false,
+    "downlevelIteration": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "rootDir": "./src/lib",
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "typeRoots": [
+      "@types",
+      "node_modules/@types"
+    ],
+    "paths": {
+      "@contracts": [
+        "types/truffle-contracts/index"
+      ],
+      "@contracts/*": [
+        "types/truffle-contracts/*"
+      ],
+      "@utils": [
+        "src/utils"
+      ],
+      "@test-utils": [
+        "src/tests/utils"
+      ]
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": [
+          "*"
+        ]
+      }
+    ]
+  }
+}

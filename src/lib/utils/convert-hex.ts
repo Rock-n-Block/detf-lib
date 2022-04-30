@@ -1,0 +1,1 @@
+export const hexToDec = (chainId: string) => parseInt(chainId, 16);
